@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9363ab8-8525-4165-b59a-9fbb1d401114" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/CustomerClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/CustomerCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/CustomerGeneration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/API/RestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormLogInPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormRecoverPasswordPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormSignUpPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/HeaderPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObject/TestUsersGeneration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormLogIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormRecoverPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormSignUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsHeaderPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsMainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/LocatorsPersonalAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ConstructorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LogInTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PersonalAccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SignUpTest.java" afterDir="false" />
+    <list default="true" id="b9363ab8-8525-4165-b59a-9fbb1d401114" name="Changes" comment="second commit">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +119,14 @@
       <option name="presentableId" value="Default" />
       <updated>1662992203460</updated>
     </task>
+    <task id="LOCAL-00001" summary="second commit">
+      <created>1663346282624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663346282624</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +141,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
