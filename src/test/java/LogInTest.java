@@ -29,42 +29,37 @@ public class LogInTest {
         driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
+
     public void createSafariDriver() {
         SafariOptions options = new SafariOptions();
         driver = new SafariDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
 
-
     @After
     public void teardown() {
         customerClient.delete(accessToken);
-
         driver.quit();
     }
 
     @Before
-    public  void createUser(){
-            customer = CustomerGeneration.getDefault();
-            customerClient = new CustomerClient();
-            ValidatableResponse response = customerClient.create(customer);
-            //логинемся под пользаком чтобы получить его токен
-            ValidatableResponse loginResponse = customerClient.logIn(CustomerCredentials.from(customer));
-            accessToken = loginResponse.extract().path("accessToken").toString().substring(7);
+    public void createUser() {
+        customer = CustomerGeneration.getDefault();
+        customerClient = new CustomerClient();
+        ValidatableResponse response = customerClient.create(customer);
+        //логинемся под пользаком чтобы получить его токен
+        ValidatableResponse loginResponse = customerClient.logIn(CustomerCredentials.from(customer));
+        accessToken = loginResponse.extract().path("accessToken").toString().substring(7);
 
     }
-
-
-
 
     @DisplayName("Проверка успешной авторизации через кнопку 'Войти в аккаунт'")
     @Test
     public void checkSuccessfulLogInClickLogInAccountButton() {
         createChromeDriver();
         //createSafariDriver();
-
         FormLogInPage formLogInPage = new FormLogInPage(driver);
-        MainPage mainPage = new MainPage (driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.clickLogInAccountBottom();
         formLogInPage.waitForLoadFormLogIn();
         successfulLogIn();
@@ -76,12 +71,11 @@ public class LogInTest {
     public void checkSuccessfulLogInClickPersonalAccountBottom() {
         createChromeDriver();
         //createSafariDriver();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         headerPage.clickPersonalAccountBottom();
         successfulLogIn();
-
     }
 
     @DisplayName("Проверка успешной авторизации через кнопку 'Зарегестрироваться' на форме авторизации")
@@ -89,8 +83,8 @@ public class LogInTest {
     public void checkSuccessfulLogInClickLogInButtonInFormSignUp() {
        createChromeDriver();
         //createSafariDriver();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         FormLogInPage formLogInPage = new FormLogInPage(driver);
         FormSignUpPage formSignUpPage = new FormSignUpPage(driver);
         mainPage.waitForLoadMainPage();
@@ -103,10 +97,10 @@ public class LogInTest {
     @DisplayName("Проверка успешной авторизации через кнопку 'Зарегестрироваться' на форме восстановить пароль")
     @Test
     public void checkLogInButtonInFormRecoverPassword() {
-       // createSafariDriver();
+        // createSafariDriver();
         createChromeDriver();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         headerPage.clickPersonalAccountBottom();
         FormLogInPage formLogInPage = new FormLogInPage(driver);
@@ -114,19 +108,18 @@ public class LogInTest {
         formLogInPage.clickRecoverPasswordLink();
         formRecoverPasswordPage.clickLogInLink();
         successfulLogIn();
-
     }
 
     public void successfulLogIn() {
         FormLogInPage formLogInPage = new FormLogInPage(driver);
-        MainPage mainPage = new MainPage (driver);
+        MainPage mainPage = new MainPage(driver);
         formLogInPage.setEmail(customer.getEmail());
         formLogInPage.setCorrectPassword(customer.getPassword());
         //formLogInPage.scrollToButtonLogIn();
         formLogInPage.clickLogInButton();
         mainPage.waitForLoadMainPage();
 
-        String expectedMainPageName="Соберите бургер";
-        assertEquals(expectedMainPageName,  mainPage.getNameMainPage());
+        String expectedMainPageName = "Соберите бургер";
+        assertEquals(expectedMainPageName, mainPage.getNameMainPage());
     }
 }

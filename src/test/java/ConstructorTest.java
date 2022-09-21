@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ConstructorTest {
     private WebDriver driver;
+
     public void createChromeDriver() {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
@@ -22,7 +23,6 @@ public class ConstructorTest {
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
 
-
     @After
     public void teardown() {
         driver.quit();
@@ -33,11 +33,11 @@ public class ConstructorTest {
     public void checkGoToSauce() {
         createChromeDriver();
         //createSafariDriver();
-        MainPage mainPage = new MainPage (driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         mainPage.clickSauceBottom();
 
-        String expectedNameSection="Соусы";
+        String expectedNameSection = "Соусы";
         assertEquals(expectedNameSection, mainPage.getNameSectionSauce());
     }
 
@@ -46,12 +46,12 @@ public class ConstructorTest {
     public void checkGoToTopping() {
         createChromeDriver();
         //createSafariDriver();
-        MainPage mainPage = new MainPage (driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         mainPage.clickToppingBottom();
 
-        String expectedNameSection="Начинки";
-        assertEquals(expectedNameSection,  mainPage.getNameSectionTopping());
+        String expectedNameSection = "Начинки";
+        assertEquals(expectedNameSection, mainPage.getNameSectionTopping());
     }
 
     @DisplayName("Проверка перехода к разделу 'Булки'")
@@ -59,15 +59,13 @@ public class ConstructorTest {
     public void checkGoToBuns() {
         createChromeDriver();
         //createSafariDriver();
-        MainPage mainPage = new MainPage (driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         mainPage.clickToppingBottom();
         mainPage.clickBunsBottom();
 
-        String expectedNameSection="Булки";
-        assertEquals(expectedNameSection,  mainPage.getNameSectionBuns());
+        String expectedNameSection = "Булки";
+        assertEquals(expectedNameSection, mainPage.getNameSectionBuns());
 
     }
-
-
 }

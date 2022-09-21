@@ -1,20 +1,19 @@
 package PageObject;
 
-import locators.LocatorsFormRecoverPassword;
-import locators.LocatorsFormSignUp;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class FormRecoverPasswordPage {
     private WebDriver driver;
-
+    //ссылка на форму входа
+    private By logInLink = By.xpath("//a[text()='Войти']");
 
     public FormRecoverPasswordPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    LocatorsFormRecoverPassword LocatorsFormRecoverPassword= new LocatorsFormRecoverPassword();
     public void clickLogInLink() {
-        driver.findElement(LocatorsFormRecoverPassword.logInLink).click();
+        driver.findElement(logInLink).click();
     }
 
 }

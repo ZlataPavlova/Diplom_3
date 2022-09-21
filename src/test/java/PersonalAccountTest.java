@@ -31,6 +31,7 @@ public class PersonalAccountTest {
         driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
+
     public void createSafariDriver() {
         SafariOptions options = new SafariOptions();
         driver = new SafariDriver(options);
@@ -44,7 +45,7 @@ public class PersonalAccountTest {
     }
 
     @Before
-    public  void createUser(){
+    public void createUser() {
         customer = CustomerGeneration.getDefault();
         customerClient = new CustomerClient();
         ValidatableResponse response = customerClient.create(customer);
@@ -53,26 +54,28 @@ public class PersonalAccountTest {
         accessToken = loginResponse.extract().path("accessToken").toString().substring(7);
 
     }
+
     @DisplayName("Проверка успешного перехода в личный кабинет неавторизованного пользователя")
     @Test
     public void checkSuccessfulGoToPersonalAccountWithoutAuthorization() {
         createChromeDriver();
         //createSafariDriver();
         FormLogInPage formLogInPage = new FormLogInPage(driver);
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         headerPage.clickPersonalAccountBottom();
         formLogInPage.waitForLoadFormLogIn();
     }
+
     @DisplayName("Проверка успешного перехода в личный кабинет авторизованного пользователя")
     @Test
     public void checkSuccessfulGoToPersonalAccountWithAuthorization() {
         checkSuccessfulGoToPersonalAccountWithoutAuthorization();
         FormLogInPage formLogInPage = new FormLogInPage(driver);
         FormSignUpPage formSignUpPage = new FormSignUpPage(driver);
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(driver);
         formLogInPage.setEmail(customer.getEmail());
         formLogInPage.setCorrectPassword(customer.getPassword());
@@ -99,22 +102,22 @@ public class PersonalAccountTest {
     @Test
     public void checkSuccessfulGoToConstructorClickConstructorButton() {
         checkSuccessfulGoToPersonalAccountWithoutAuthorization();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         headerPage.clickConstructorBottom();
-        String expectedMainPageName="Соберите бургер";
-        assertEquals(expectedMainPageName,  mainPage.getNameMainPage());
+        String expectedMainPageName = "Соберите бургер";
+        assertEquals(expectedMainPageName, mainPage.getNameMainPage());
     }
 
     @DisplayName("Проверка успешного перехода при клике на логотип")
     @Test
     public void checkSuccessfulGoToConstructorClickLogo() {
         checkSuccessfulGoToPersonalAccountWithoutAuthorization();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         headerPage.clickLogoBottom();
-        String expectedMainPageName="Соберите бургер";
-        assertEquals(expectedMainPageName,  mainPage.getNameMainPage());
+        String expectedMainPageName = "Соберите бургер";
+        assertEquals(expectedMainPageName, mainPage.getNameMainPage());
     }
 
 }

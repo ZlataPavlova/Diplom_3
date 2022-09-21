@@ -1,6 +1,5 @@
 package PageObject;
-import locators.LocatorsFormLogIn;
-import locators.LocatorsMainPage;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,42 +10,51 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class FormLogInPage {
 
     private WebDriver driver;
-    TestUsersGeneration testUsersGeneration = new TestUsersGeneration();
+    //ссылка на форму регистрации
+    private By signUpLink = By.className("Auth_link__1fOlj");
+    // локатор ссылки Восстановить пароль
+    private By recoverPasswordLink = By.xpath("//a[text()='Восстановить пароль']");
+    //локатор поля Password
+    private By passwordField = By.xpath(".//input[@name='Пароль']");
+    //локатор поля Email
+    private By emailField = By.xpath(".//fieldset[@class='Auth_fieldset__1QzWN mb-6'][1]//input[@name='name']");
+    //локатор кнопки Войти
+    private By logInButton = By.xpath(".//button[text()='Войти']");
 
-    public FormLogInPage(WebDriver driver){
+    public FormLogInPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    LocatorsFormLogIn LocatorsFormLogIn = new LocatorsFormLogIn();
-    public void waitForLoadFormLogIn(){
+    public void waitForLoadFormLogIn() {
         new WebDriverWait(driver, 20)
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div/h2[text()='Вход']")));
     }
 
     public void clickSignUpLink() {
-        driver.findElement(LocatorsFormLogIn.signUpLink).click();
+        driver.findElement(signUpLink).click();
     }
 
     public void clickRecoverPasswordLink() {
-        driver.findElement(LocatorsFormLogIn.recoverPasswordLink).click();
+        driver.findElement(recoverPasswordLink).click();
     }
+
     public void setEmail(String email) {
-        driver.findElement(LocatorsFormLogIn.emailField).sendKeys(email);
+        driver.findElement(emailField).sendKeys(email);
     }
 
 
     public void setCorrectPassword(String correctPassword) {
-        driver.findElement(LocatorsFormLogIn.passwordField).sendKeys(correctPassword);
+        driver.findElement(passwordField).sendKeys(correctPassword);
     }
 
 
     public void clickLogInButton() {
-        driver.findElement(LocatorsFormLogIn.logInButton).click();
+        driver.findElement(logInButton).click();
     }
 
     public void scrollToButtonLogIn() {
 
-        WebElement element = driver.findElement(LocatorsFormLogIn.logInButton);
+        WebElement element = driver.findElement(logInButton);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
         element.click();
     }

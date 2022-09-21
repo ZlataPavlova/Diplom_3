@@ -17,22 +17,18 @@ import org.openqa.selenium.safari.SafariOptions;
 import static org.junit.Assert.assertEquals;
 
 public class SignUpTest {
-    TestUsersGeneration testUsersGeneration = new TestUsersGeneration();
     private WebDriver driver;
-    private String name= testUsersGeneration.getName();
-    private String email= testUsersGeneration.getEmail();
-    private String correctPassword=testUsersGeneration.getCorrectPassword().toString();
-    private String incorrectPassword=testUsersGeneration.getIncorrectPassword().toString();
-
     private String accessToken;
     private CustomerClient customerClient;
     private Customer customer;
     private Customer customerWithIncorrectPassword;
+
     public void createChromeDriver() {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
     }
+
     public void createSafariDriver() {
         SafariOptions options = new SafariOptions();
         driver = new SafariDriver(options);
@@ -40,50 +36,48 @@ public class SignUpTest {
     }
 
     @Before
-    public  void createUser(){
+    public void createUser() {
         customer = CustomerGeneration.getDefault();
         customerWithIncorrectPassword = CustomerGeneration.getIncorrectPassword();
         customerClient = new CustomerClient();
     }
 
-  @After
- public void teardown() {
-      ValidatableResponse loginResponse = customerClient.logIn(CustomerCredentials.from(customer));
-      accessToken = loginResponse.extract().path("accessToken");
-      if( accessToken != null){
-          accessToken = loginResponse.extract().path("accessToken").toString().substring(7);
-          customerClient.delete(accessToken);
-      } else {
-          accessToken = "";
-      }
-
-      driver.quit();
-  }
+    @After
+    public void teardown() {
+        ValidatableResponse loginResponse = customerClient.logIn(CustomerCredentials.from(customer));
+        accessToken = loginResponse.extract().path("accessToken");
+        if (accessToken != null) {
+            accessToken = loginResponse.extract().path("accessToken").toString().substring(7);
+            customerClient.delete(accessToken);
+        } else {
+            accessToken = "";
+        }
+        driver.quit();
+    }
 
     @DisplayName("Проверка успешного перехода на форму авторизации через кнопку Войти в аккаунт")
     @Test
     public void checkLogInAccountBottom() {
         createChromeDriver();
-       // createSafariDriver();
-        MainPage mainPage = new MainPage (driver);
+        //createSafariDriver();
+        MainPage mainPage = new MainPage(driver);
         FormLogInPage formLogInPage = new FormLogInPage(driver);
         mainPage.waitForLoadMainPage();
         mainPage.clickLogInAccountBottom();
         formLogInPage.waitForLoadFormLogIn();
     }
+
     @DisplayName("Проверка успешного перехода на форму авторизации через кнопку Войти в личный кабинет")
     @Test
     public void checkPersonalAccountBottom() {
         createChromeDriver();
         //createSafariDriver();
-        HeaderPage headerPage = new HeaderPage (driver);
-        MainPage mainPage = new MainPage (driver);
+        HeaderPage headerPage = new HeaderPage(driver);
+        MainPage mainPage = new MainPage(driver);
         FormLogInPage formLogInPage = new FormLogInPage(driver);
         mainPage.waitForLoadMainPage();
         headerPage.clickPersonalAccountBottom();
         formLogInPage.waitForLoadFormLogIn();
-
-
     }
 
     @DisplayName("Проверка успешной регистрации пользователя через кнопку Войти в аккаунт")
@@ -120,8 +114,8 @@ public class SignUpTest {
     @Test
     public void incorrectPasswordErrorAssertion() {
         createChromeDriver();
-      //  createSafariDriver();
-        MainPage mainPage = new MainPage (driver);
+        //createSafariDriver();
+        MainPage mainPage = new MainPage(driver);
         mainPage.waitForLoadMainPage();
         mainPage.clickLogInAccountBottom();
         FormLogInPage formLogInPage = new FormLogInPage(driver);
@@ -135,7 +129,7 @@ public class SignUpTest {
 
         String actualMessage = formSignUpPage.getWrongMessage();
 
-        assertEquals( "Некорректный пароль", actualMessage);
+        assertEquals("Некорректный пароль", actualMessage);
     }
 
 

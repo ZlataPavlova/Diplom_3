@@ -4,8 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9363ab8-8525-4165-b59a-9fbb1d401114" name="Changes" comment="second commit">
+    <list default="true" id="b9363ab8-8525-4165-b59a-9fbb1d401114" name="Changes" comment="allure report">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/API/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/API/CustomerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/CustomerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/API/CustomerGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/CustomerGeneration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/API/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/API/RestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/FormLogInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormLogInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/FormRecoverPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormRecoverPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/FormSignUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/FormSignUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/HeaderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObject/PersonalAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObject/TestUsersGeneration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormLogIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormRecoverPassword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsFormSignUp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsHeaderPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsMainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/LocatorsPersonalAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConstructorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LogInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PersonalAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PersonalAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SignUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SignUpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0d0521d0-cd83-4d9d-8e6d-3bb5885010db-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/341c3b2e-17bb-47e0-b282-b19f7a3bfbf7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/37c6da56-54db-4736-826e-54e9d890812a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/403e29bb-17b6-4624-b284-f34940d1d6a5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/44ea3372-04d4-458b-8279-261f079a2521-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/515316e4-75ea-4814-a309-c05d2526d5b7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5f729e2e-e6ec-4190-9ef4-aeedd85b1776-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/654256cc-a5b9-4f53-8b22-26cbf8b3a782-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7c17c1c4-63c1-4ecd-be2d-7fecf91605c3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7f661812-5959-4d4d-b62d-f8eb9b51c84a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8bdd01df-5611-4b39-b10d-5fcf4ae074ac-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a340ef85-5ca2-4256-878c-237a29b99879-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a8ac7d90-e8d7-4163-bb9a-fc8ec100e2a4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c2d7c55d-80ef-4adf-9ba4-1bdecadcadf5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/dd3c0a58-c6f5-414b-b5f6-3c1d0672ef06-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e09a1cd5-3da3-4f46-8577-6a6ab4173502-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f9ab094a-54b7-47e8-8b4d-a7026cc84062-result.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +91,21 @@
       <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SignUpTest.checkPersonalAccountBottom">
-    <configuration name="LogInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConstructorTest">
+    <configuration name="ConstructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LogInTest" />
+      <option name="MAIN_CLASS_NAME" value="ConstructorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogInTest.checkSuccessfulLogInClickLogInAccountButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LogInTest" />
-      <option name="METHOD_NAME" value="checkSuccessfulLogInClickLogInAccountButton" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,6 +119,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonalAccountTest.checkSuccessfulGoToConstructorClickLogo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonalAccountTest" />
+      <option name="METHOD_NAME" value="checkSuccessfulGoToConstructorClickLogo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignUpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,23 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpTest.checkPersonalAccountBottom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SignUpTest" />
-      <option name="METHOD_NAME" value="checkPersonalAccountBottom" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SignUpTest.checkPersonalAccountBottom" />
-        <item itemvalue="JUnit.SignUpTest" />
-        <item itemvalue="JUnit.PersonalAccountTest" />
+        <item itemvalue="JUnit.ConstructorTest" />
         <item itemvalue="JUnit.LogInTest" />
-        <item itemvalue="JUnit.LogInTest.checkSuccessfulLogInClickLogInAccountButton" />
+        <item itemvalue="JUnit.PersonalAccountTest" />
+        <item itemvalue="JUnit.SignUpTest" />
+        <item itemvalue="JUnit.PersonalAccountTest.checkSuccessfulGoToConstructorClickLogo" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663346282624</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="allure report">
+      <created>1663346742284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663346742284</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,7 +187,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="allure report" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
